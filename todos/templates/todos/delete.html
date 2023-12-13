@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create To-Do List</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div>
+                    <a style="text-decoration: none;" href="{% url 'todo_list_list' %}">Main Page</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div>
+                <h1>Are you sure?</h1>
+                <form method="post">
+                    {% csrf_token %}
+                    <button>Delete</button>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
