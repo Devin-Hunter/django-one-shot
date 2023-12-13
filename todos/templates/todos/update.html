@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Update To-Do List</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div>
+                    <a style="text-decoration: none;" href="{% url 'todo_list_list' %}">Main Page</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div>
+                <h1>Update List</h1>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button>Update</button>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
